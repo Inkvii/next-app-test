@@ -1,8 +1,7 @@
 import { NextRouter, useRouter } from "next/router"
 import { Route } from "router/router"
-import { ParsedUrlQueryInput } from "node:querystring"
 
-export default function useTypedRouter<SEARCH_PARAMS extends ParsedUrlQueryInput, VARIABLES extends object>(
+export default function useTypedRouter<SEARCH_PARAMS, VARIABLES>(
   _route: Route<SEARCH_PARAMS, VARIABLES>
 ): NextRouter & {
   variables: VARIABLES
